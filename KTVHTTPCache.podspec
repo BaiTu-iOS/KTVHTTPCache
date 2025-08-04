@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "KTVHTTPCache"
-  s.version             = "3.1.0"
+  s.version             = "3.1.0.BAITU"
   s.summary             = "A powerful media cache framework."
   s.homepage            = "https://github.com/ChangbaDevs/KTVHTTPCache"
   s.license             = { :type => "MIT", :file => "LICENSE" }
