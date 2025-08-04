@@ -767,8 +767,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 33XFRZV3M7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -797,8 +798,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 33XFRZV3M7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
