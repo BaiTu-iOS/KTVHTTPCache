@@ -9,7 +9,7 @@ KTVHTTPCache is a powerful HTTP caching framework, very suitable for caching mul
 
 ## Flow Chart
 
-![KTVHTTPCache Flow Chart](http://libobjc-libs.oss-cn-beijing.aliyuncs.com/Resource/KTVHTTPCache-flow-chart-thin.jpeg)
+![KTVHTTPCache Flow Chart](https://github.com/ChangbaDevs/KTVHTTPCache/blob/master/documents/flow-chart.jpg?raw=true)
 
 
 ## Features
@@ -115,6 +115,14 @@ AVPlayer *player = [AVPlayer playerWithURL:proxyURL];
 // The preloading range can be controlled through the Range parameter in the Request Header.
 KTVHCDataRequest *request= [[KTVHCDataRequest alloc] initWithURL:URL headers:headers];
 KTVHCDataLoader *loader = [KTVHTTPCache cacheLoaderWithRequest:request];
+loader.delegate = self;
+[loader prepare];
+```
+
+```objc
+// For HLS content.
+KTVHCDataRequest *request= [[KTVHCDataRequest alloc] initWithURL:URL headers:nil];
+KTVHCDataHLSLoader *loader = [KTVHTTPCache cacheHLSLoaderWithRequest:request];
 loader.delegate = self;
 [loader prepare];
 ```

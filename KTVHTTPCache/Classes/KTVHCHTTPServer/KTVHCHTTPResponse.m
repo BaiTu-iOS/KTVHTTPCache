@@ -49,6 +49,7 @@
     if (self.reader.isFinished) {
         KTVHCLogHTTPResponse(@"%p, Read data did finished", self);
         [self.reader close];
+        [self.connection responseDidAbort:self];
     }
     return data;
 }
@@ -63,7 +64,7 @@
 
 - (UInt64)contentLength
 {
-    KTVHCLogHTTPResponse(@"%p, Conetnt length : %lld", self, self.reader.response.totalLength);
+    KTVHCLogHTTPResponse(@"%p, Content length : %lld", self, self.reader.response.totalLength);
     return self.reader.response.totalLength;
 }
 

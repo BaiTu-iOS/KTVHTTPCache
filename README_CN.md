@@ -9,7 +9,7 @@ KTVHTTPCache 是一个强大的 HTTP 缓存框架，非常适合用于多媒体�
 
 ## Flow Chart
 
-![KTVHTTPCache Flow Chart](http://libobjc-libs.oss-cn-beijing.aliyuncs.com/Resource/KTVHTTPCache-flow-chart-thin.jpeg)
+![KTVHTTPCache Flow Chart](https://github.com/ChangbaDevs/KTVHTTPCache/blob/master/documents/flow-chart.jpg?raw=true)
 
 
 ## Features
@@ -115,6 +115,14 @@ AVPlayer *player = [AVPlayer playerWithURL:proxyURL];
 // 可通过 Request Header 中 Range 参数控制预加载范围
 KTVHCDataRequest *request= [[KTVHCDataRequest alloc] initWithURL:URL headers:headers];
 KTVHCDataLoader *loader = [KTVHTTPCache cacheLoaderWithRequest:request];
+loader.delegate = self;
+[loader prepare];
+```
+
+```objc
+// 预加载 HLS 内容
+KTVHCDataRequest *request= [[KTVHCDataRequest alloc] initWithURL:URL headers:nil];
+KTVHCDataHLSLoader *loader = [KTVHTTPCache cacheHLSLoaderWithRequest:request];
 loader.delegate = self;
 [loader prepare];
 ```

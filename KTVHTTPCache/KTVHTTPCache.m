@@ -11,6 +11,7 @@
 #import "KTVHCHTTPServer.h"
 #import "KTVHCDownload.h"
 #import "KTVHCURLTool.h"
+#import "KTVHCHLSTool.h"
 #import "KTVHCLog.h"
 
 @implementation KTVHTTPCache
@@ -37,6 +38,11 @@
     return [KTVHCHTTPServer server].isRunning;
 }
 
++ (BOOL)proxyIsProxyURL:(NSURL *)URL
+{
+    return [[KTVHCHTTPServer server] isProxyURL:URL];
+}
+
 + (NSURL *)proxyURLWithOriginalURL:(NSURL *)URL
 {
     return [[KTVHCHTTPServer server] URLWithOriginalURL:URL];
@@ -45,6 +51,11 @@
 + (NSURL *)proxyURLWithOriginalURL:(NSURL *)URL bindToLocalhost:(BOOL)bindToLocalhost
 {
     return [[KTVHCHTTPServer server] URLWithOriginalURL:URL bindToLocalhost:bindToLocalhost];
+}
+
++ (NSURL *)proxyOriginalURLWithURL:(NSURL *)URL
+{
+    return [[KTVHCHTTPServer server] originalURLWithURL:URL];
 }
 
 #pragma mark - Data Storage
@@ -62,6 +73,11 @@
 + (KTVHCDataLoader *)cacheLoaderWithRequest:(KTVHCDataRequest *)request
 {
     return [[KTVHCDataStorage storage] loaderWithRequest:request];
+}
+
++ (KTVHCDataHLSLoader *)cacheHLSLoaderWithRequest:(KTVHCDataRequest *)request
+{
+    return [[KTVHCDataStorage storage] HLSLoaderWithRequest:request];
 }
 
 + (void)cacheSetMaxCacheLength:(long long)maxCacheLength
@@ -101,9 +117,16 @@
 
 #pragma mark - Encode
 
-+ (void)encodeSetURLConverter:(NSURL * (^)(NSURL *URL))URLConverter;
++ (void)encodeSetURLConverter:(NSURL * (^)(NSURL *URL))URLConverter
 {
     [KTVHCURLTool tool].URLConverter = URLConverter;
+}
+
+#pragma mark - HLS
+
++ (void)hlsSetContentHandler:(NSString *(^)(NSString *))contentHandler
+{
+    [KTVHCHLSTool tool].contentHandler = contentHandler;
 }
 
 #pragma mark - Download

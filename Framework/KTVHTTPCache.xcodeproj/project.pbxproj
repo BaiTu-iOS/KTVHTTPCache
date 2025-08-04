@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4E30E26F2B49BA0E00B54596 /* KTVHCHTTPHLSResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E30E26D2B49BA0E00B54596 /* KTVHCHTTPHLSResponse.h */; };
 		4E30E2702B49BA0E00B54596 /* KTVHCHTTPHLSResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E30E26E2B49BA0E00B54596 /* KTVHCHTTPHLSResponse.m */; };
+		4E50B1F02E0E4F6B005249C8 /* KTVHCHLSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E50B1EF2E0E4F6B005249C8 /* KTVHCHLSTool.m */; };
+		4E50B1F12E0E4F6B005249C8 /* KTVHCHLSTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E50B1EE2E0E4F6B005249C8 /* KTVHCHLSTool.h */; };
+		4E50B1F62E0E7EC0005249C8 /* KTVHCDataHLSLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E50B1F52E0E7EC0005249C8 /* KTVHCDataHLSLoader.m */; };
+		4E50B1F72E0E7EC0005249C8 /* KTVHCDataHLSLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E50B1F42E0E7EC0005249C8 /* KTVHCDataHLSLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EE21B672B4846BF008EFC11 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE21B652B4846BF008EFC11 /* GCDAsyncSocket.m */; };
 		4EE21B682B4846BF008EFC11 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EE21B662B4846BF008EFC11 /* GCDAsyncSocket.h */; };
 		4EE21B922B4847FD008EFC11 /* HTTPConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EE21B6A2B4847FD008EFC11 /* HTTPConnection.h */; };
@@ -106,6 +110,11 @@
 /* Begin PBXFileReference section */
 		4E30E26D2B49BA0E00B54596 /* KTVHCHTTPHLSResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVHCHTTPHLSResponse.h; sourceTree = "<group>"; };
 		4E30E26E2B49BA0E00B54596 /* KTVHCHTTPHLSResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVHCHTTPHLSResponse.m; sourceTree = "<group>"; };
+		4E50B1EE2E0E4F6B005249C8 /* KTVHCHLSTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVHCHLSTool.h; sourceTree = "<group>"; };
+		4E50B1EF2E0E4F6B005249C8 /* KTVHCHLSTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVHCHLSTool.m; sourceTree = "<group>"; };
+		4E50B1F42E0E7EC0005249C8 /* KTVHCDataHLSLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVHCDataHLSLoader.h; sourceTree = "<group>"; };
+		4E50B1F52E0E7EC0005249C8 /* KTVHCDataHLSLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVHCDataHLSLoader.m; sourceTree = "<group>"; };
+		4E50B1F82E0ECB7B005249C8 /* README_CN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README_CN.md; path = ../README_CN.md; sourceTree = SOURCE_ROOT; };
 		4EE21B652B4846BF008EFC11 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		4EE21B662B4846BF008EFC11 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		4EE21B6A2B4847FD008EFC11 /* HTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConnection.h; sourceTree = "<group>"; };
@@ -301,6 +310,7 @@
 				9CBD87E621F70AFC006BCBF5 /* module.modulemap */,
 				9CF672C32213BEB4008CEFBE /* LICENSE */,
 				9CF672C52213BEB4008CEFBE /* README.md */,
+				4E50B1F82E0ECB7B005249C8 /* README_CN.md */,
 				9CF672C42213BEB4008CEFBE /* KTVHTTPCache.podspec */,
 				9CA86E8821F709700007B098 /* KTVHTTPCache */,
 				9CD8C1FB20AF2B5C00949350 /* Vendors */,
@@ -346,6 +356,8 @@
 			children = (
 				9CA86E8F21F709700007B098 /* KTVHCURLTool.h */,
 				9CA86E8D21F709700007B098 /* KTVHCURLTool.m */,
+				4E50B1EE2E0E4F6B005249C8 /* KTVHCHLSTool.h */,
+				4E50B1EF2E0E4F6B005249C8 /* KTVHCHLSTool.m */,
 				9CA86E8E21F709700007B098 /* KTVHCPathTool.h */,
 				9CA86E8C21F709700007B098 /* KTVHCPathTool.m */,
 			);
@@ -382,6 +394,8 @@
 				9CA86EA921F709700007B098 /* KTVHCDataFileSource.m */,
 				9CA86EAA21F709700007B098 /* KTVHCDataLoader.h */,
 				9CA86EB921F709700007B098 /* KTVHCDataLoader.m */,
+				4E50B1F42E0E7EC0005249C8 /* KTVHCDataHLSLoader.h */,
+				4E50B1F52E0E7EC0005249C8 /* KTVHCDataHLSLoader.m */,
 				9CA86EA121F709700007B098 /* KTVHCDataNetworkSource.h */,
 				9CA86EB221F709700007B098 /* KTVHCDataNetworkSource.m */,
 				9CA86EBD21F709700007B098 /* KTVHCDataReader.h */,
@@ -459,6 +473,7 @@
 				9CA86ECD21F709700007B098 /* KTVHTTPCache.h in Headers */,
 				9CA86F0621F709700007B098 /* KTVHCError.h in Headers */,
 				9CA86F0721F709700007B098 /* KTVHCRange.h in Headers */,
+				4E50B1F12E0E4F6B005249C8 /* KTVHCHLSTool.h in Headers */,
 				4EE21BAA2B4847FD008EFC11 /* MultipartMessageHeader.h in Headers */,
 				9CA86EFF21F709700007B098 /* KTVHCDataCacheItemZone.h in Headers */,
 				9CA86EE421F709700007B098 /* KTVHCDataCacheItem.h in Headers */,
@@ -494,6 +509,7 @@
 				9CA86F0821F709700007B098 /* KTVHCDownload.h in Headers */,
 				9CA86EFE21F709700007B098 /* KTVHCDataStorage.h in Headers */,
 				9CA86ED821F709700007B098 /* KTVHCHTTPHeader.h in Headers */,
+				4E50B1F72E0E7EC0005249C8 /* KTVHCDataHLSLoader.h in Headers */,
 				9CA86EF021F709700007B098 /* KTVHCDataSource.h in Headers */,
 				9CA86EF121F709700007B098 /* KTVHCDataUnitPool.h in Headers */,
 				4EE21B9F2B4847FD008EFC11 /* HTTPDataResponse.h in Headers */,
@@ -584,6 +600,7 @@
 				9CA86EDA21F709700007B098 /* KTVHCHTTPResponse.m in Sources */,
 				9CA86EF421F709700007B098 /* KTVHCDataSourceManager.m in Sources */,
 				9CA86EF221F709700007B098 /* KTVHCDataNetworkSource.m in Sources */,
+				4E50B1F62E0E7EC0005249C8 /* KTVHCDataHLSLoader.m in Sources */,
 				9CA86ED721F709700007B098 /* KTVHCHTTPConnection.m in Sources */,
 				4EE21B982B4847FD008EFC11 /* HTTPErrorResponse.m in Sources */,
 				4EE21BBF2B484858008EFC11 /* DDData.m in Sources */,
@@ -598,6 +615,7 @@
 				4EE21BA72B4847FD008EFC11 /* WebSocket.m in Sources */,
 				9CA86EDC21F709700007B098 /* KTVHCHTTPServer.m in Sources */,
 				9CA86EEC21F709700007B098 /* KTVHCDataUnit.m in Sources */,
+				4E50B1F02E0E4F6B005249C8 /* KTVHCHLSTool.m in Sources */,
 				4EE21BB62B4847FD008EFC11 /* HTTPServer.m in Sources */,
 				4EE21BC22B484858008EFC11 /* DDRange.m in Sources */,
 				4EE21B9E2B4847FD008EFC11 /* HTTPRedirectResponse.m in Sources */,
